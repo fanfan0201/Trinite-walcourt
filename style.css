@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #87CEEB; /* Bleu ciel */
   margin: 0;
   padding: 0;
   display: flex;
@@ -15,11 +15,20 @@ body {
 }
 
 .countdown {
-  font-size: 5vw; /* Taille de police relative à la largeur de l'écran */
   margin-bottom: 20px;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-img img {
+  width: 200px; /* Ajustez la largeur de l'image selon vos préférences */
+  height: auto; /* Permet de maintenir les proportions de l'image */
+}
+
+.countdown-name {
+  font-size: 24px; /* Taille de la police pour le nom du compte à rebours */
+  margin-bottom: 10px; /* Marge entre le nom du compte à rebours et le temps restant */
+}
+
+.countdown-time {
+  font-size: 36px; /* Taille de la police pour le temps restant */
+  font-weight: bold; /* Met en gras pour une meilleure lisibilité */
 }
