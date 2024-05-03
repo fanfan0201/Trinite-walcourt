@@ -1,27 +1,109 @@
-re<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compteurs à rebours</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compte à rebours - De la gueule</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .countdown {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .countdown h2 {
+            margin-bottom: 10px;
+        }
+
+        .countdown p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .countdown .time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .countdown .time span {
+            font-size: 18px;
+            margin: 0 5px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="countdown" id="countdown1">
-      <div class="countdown-name">Ouverture de la Trinité (Vendredi 17h)</div>
-      <div class="countdown-time" id="countdown-time1"></div>
-    </div>
-    <div class="countdown" id="countdown2">
-      <div class="countdown-name">Samedi de la Trinité (15h)</div>
-      <div class="countdown-time" id="countdown-time2"></div>
-    </div>
-    <div class="countdown" id="countdown3">
-      <div class="countdown-name">Dimanche de la Trinité (9h)</div>
-      <div class="countdown-time" id="countdown-time3"></div>
-    </div>
-  </div>
+    <h1>De la gueule</h1>
 
-  <script src="script.js"></script>
+    <div class="countdown">
+        <h2>Ouverture de la Trinité (vendredi 17h)</h2>
+        <p id="countdown1"></p>
+    </div>
+
+    <div class="countdown">
+        <h2>Samedi de Trinité (15h)</h2>
+        <p id="countdown2"></p>
+    </div>
+
+    <div class="countdown">
+        <h2>Dimanche de Trinité (9h)</h2>
+        <p id="countdown3"></p>
+    </div>
+
+    <script>
+        // Date et heure de fin pour chaque compteur
+        const countdown1Date = new Date("2024-05-24T17:00:00");
+        const countdown2Date = new Date("2024-05-25T15:00:00");
+        const countdown3Date = new Date("2024-05-26T09:00:00");
+
+        // Fonction pour formater le temps restant
+        function formatTime(time) {
+            const days = Math.floor(time / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((time % (1000 * 60)) / 1000);
+
+            return `${days}j ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        // Fonction pour mettre à jour chaque compteur
+        function updateCountdown() {
+            const now = new Date();
+
+            const countdown1Time = countdown1Date.getTime() - now.getTime();
+            const countdown2Time = countdown2Date.getTime() - now.getTime();
+            const countdown3Time = countdown3Date.getTime() - now.getTime();
+
+            const countdown1Element = document.getElementById("countdown1");
+            const countdown2Element = document.getElementById("countdown2");
+            const countdown3Element = document.getElementById("countdown3");
+
+            countdown1Element.textContent = formatTime(countdown1Time);
+            countdown2Element.textContent = formatTime(countdown2Time);
+            countdown3Element.textContent = formatTime(countdown3Time);
+
+            if (countdown1Time <= 0) {
+                countdown1Element.textContent = "Terminé!";
+            }
+
+            if (countdown2Time <= 0) {
+                countdown2Element.textContent = "Terminé!";
+            }
+
+            if (countdown3Time <= 0) {
+                countdown3Element.textContent = "Terminé!";
+            }
+        }
+
+        // Mettre à jour les compteurs toutes les secondes
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
