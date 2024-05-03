@@ -37,11 +37,12 @@ h1 {
 }
 
 .countdown {
-  font-size: 2rem;
-  margin-bottom: 40px; /* Augmentez l'espace entre les compteurs */
+  font-size: 6rem; /* Taille triplée */
+  margin-bottom: 40px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
