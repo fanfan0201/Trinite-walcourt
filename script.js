@@ -25,7 +25,7 @@ function updateCountdown(endTime, elementId, title) {
 
 // Mettre à jour les compteurs à rebours chaque seconde
 setInterval(() => {
-  updateCountdown(endTime1, 'countdown1', 'Ouverture de la Trinité');
-  updateCountdown(endTime2, 'countdown2', 'Samedi de la Trinité');
-  updateCountdown(endTime3, 'countdown3', 'Dimanche de la Trinité');
+  updateCountdown(endTime1, 'countdown1', 'Ouverture de la Trinité (vendredi 17h00)  ');
+  updateCountdown(endTime2, 'countdown2', 'Samedi de la Trinité (15h00)              ');
+  updateCountdown(endTime3, 'countdown3', 'Dimanche de la Trinité (9h00)              ');
 }, 1000);
