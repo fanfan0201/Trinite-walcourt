@@ -4,7 +4,7 @@ const endTime2 = new Date('2024-05-25T15:00:00').getTime();
 const endTime3 = new Date('2024-05-26T09:00:00').getTime();
 
 // Fonction pour mettre à jour les compteurs à rebours chaque seconde
-function updateCountdown(endTime, elementId, titleElementId, timeElementId, title) {
+function updateCountdown(endTime, elementId, nameElementId, timeElementId, title) {
   const now = new Date().getTime();
   const distance = endTime - now;
 
@@ -15,7 +15,7 @@ function updateCountdown(endTime, elementId, titleElementId, timeElementId, titl
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Afficher le compte à rebours
-  document.getElementById(titleElementId).textContent = title;
+  document.getElementById(nameElementId).textContent = title;
   document.getElementById(timeElementId).textContent = `${days}j ${hours}h ${minutes}m ${seconds}s`;
 
   // Si le compte à rebours est terminé, afficher un message
