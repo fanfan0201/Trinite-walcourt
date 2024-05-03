@@ -11,12 +11,11 @@ body {
 
 .container {
   text-align: center;
-  max-width: 1200px; /* Ajout d'une largeur maximale pour éviter un contenu trop étendu */
-  margin: auto; /* Centrer horizontalement */
+  max-width: 80%; /* Pourcentage de la largeur de l'écran */
 }
 
 .countdown {
-  font-size: 18vw;
+  font-size: 5vw; /* Taille de police relative à la largeur de l'écran */
   margin-bottom: 20px;
   background-color: #333;
   color: #fff;
