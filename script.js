@@ -4,7 +4,7 @@ const endTime2 = new Date('2024-05-25T15:00:00').getTime();
 const endTime3 = new Date('2024-05-26T09:00:00').getTime();
 
 // Fonction pour mettre à jour les compteurs à rebours chaque seconde
-function updateCountdown(endTime, elementId, title) {
+function updateCountdown(endTime, elementId, titleElementId, timeElementId, title) {
   const now = new Date().getTime();
   const distance = endTime - now;
 
@@ -15,17 +15,18 @@ function updateCountdown(endTime, elementId, title) {
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Afficher le compte à rebours
-  document.getElementById(elementId).innerHTML = `${title}: ${days}j ${hours}h ${minutes}m ${seconds}s`;
+  document.getElementById(titleElementId).textContent = title;
+  document.getElementById(timeElementId).textContent = `${days}j ${hours}h ${minutes}m ${seconds}s`;
 
   // Si le compte à rebours est terminé, afficher un message
   if (distance < 0) {
-    document.getElementById(elementId).innerHTML = `${title}: EXPIRÉ`;
+    document.getElementById(timeElementId).textContent = "EXPIRÉ";
   }
 }
 
 // Mettre à jour les compteurs à rebours chaque seconde
 setInterval(() => {
-  updateCountdown(endTime1, 'countdown1', 'Ouverture de la Trinité (vendredi 17h00)  ');
-  updateCountdown(endTime2, 'countdown2', 'Samedi de la Trinité (15h00)              ');
-  updateCountdown(endTime3, 'countdown3', 'Dimanche de la Trinité (9h00)              ');
+  updateCountdown(endTime1, 'countdown1', 'countdown-name1', 'countdown-time1', 'Ouverture de la Trinité');
+  updateCountdown(endTime2, 'countdown2', 'countdown-name2', 'countdown-time2', 'Samedi de la Trinité');
+  updateCountdown(endTime3, 'countdown3', 'countdown-name3', 'countdown-time3', 'Dimanche de la Trinité');
 }, 1000);
