@@ -1,8 +1,3 @@
-// Définition des dates de fin pour chaque compte à rebours (en millisecondes)
-const endTime1 = new Date('2024-05-24T17:00:00').getTime();
-const endTime2 = new Date('2024-05-25T15:00:00').getTime();
-const endTime3 = new Date('2024-05-26T09:00:00').getTime();
-
 // Fonction pour mettre à jour les compteurs à rebours chaque seconde
 function updateCountdown(endTime, elementId) {
   const now = new Date().getTime();
