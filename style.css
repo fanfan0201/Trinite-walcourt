@@ -11,7 +11,7 @@ body {
 
 .container {
   text-align: center;
-  max-width: 600px; /* Ajout d'une largeur maximale pour éviter un contenu trop étendu */
+  max-width: 1200px; /* Ajout d'une largeur maximale pour éviter un contenu trop étendu */
   margin: auto; /* Centrer horizontalement */
 }
 
