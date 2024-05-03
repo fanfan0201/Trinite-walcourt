@@ -38,7 +38,7 @@ h1 {
 
 .countdown {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px; /* Augmentez l'espace entre les compteurs */
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 20px;
