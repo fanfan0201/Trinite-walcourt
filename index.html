@@ -40,10 +40,10 @@
     </style>
 </head>
 <body>
-    <h1>Trinité 2024</h1>
+    <h1>Trinité 2025</h1>
 
     <div class="countdown">
-        <h2>Ouverture de la Trinité (vendredi 17h)</h2>
+        <h2>Ouverture de la Trinité (vendredi 18h)</h2>
         <p id="countdown1"></p>
     </div>
 
@@ -59,9 +59,9 @@
 
     <script>
         // Date et heure de fin pour chaque compteur
-        const countdown1Date = new Date("2024-05-24T17:00:00");
-        const countdown2Date = new Date("2024-05-25T15:00:00");
-        const countdown3Date = new Date("2024-05-26T09:00:00");
+        const countdown1Date = new Date("2025-06-13T18:00:00");
+        const countdown2Date = new Date("2025-06-14T15:00:00");
+        const countdown3Date = new Date("2025-06-15T09:00:00");
 
         // Fonction pour formater le temps restant
         function formatTime(time) {
@@ -90,15 +90,15 @@
             countdown3Element.textContent = formatTime(countdown3Time);
 
             if (countdown1Time <= 0) {
-                countdown1Element.textContent = "Terminé!";
+                countdown1Element.textContent = "Je déclare la Trinité ouverte !";
             }
 
             if (countdown2Time <= 0) {
-                countdown2Element.textContent = "Terminé!";
+                countdown2Element.textContent = "Bon samedi de Trinité ... soyez sage !";
             }
 
             if (countdown3Time <= 0) {
-                countdown3Element.textContent = "Terminé!";
+                countdown3Element.textContent = "Bon dimanche de Trinité !";
             }
         }
 
