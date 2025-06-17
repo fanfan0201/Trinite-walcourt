@@ -40,31 +40,24 @@
     </style>
 </head>
 <body>
-    <h1>Trinité 2025</h1>
-
-    <div class="countdown">
-        <h2>Ouverture de la Trinité</h2>
-        <h3>(Vendredi 13 juin - 18h)</h3>
-        <p id="countdown1"></p>
-    </div>
+    <h1>Trinité 2026</h1>
 
     <div class="countdown">
         <h2>Samedi de Trinité</h2>
-        <h3>(Samedi 14 juin - 15h)</h3>
+        <h3>(Samedi 30 mai - 15h)</h3>
         <p id="countdown2"></p>
     </div>
 
     <div class="countdown">
         <h2>Dimanche de Trinité</h2>
-        <h3>(Dimanche 15 juin - 9h)</h3>
+        <h3>(Dimanche 31 mai - 9h)</h3>
         <p id="countdown3"></p>
     </div>
 
     <script>
         // Date et heure de fin pour chaque compteur
-        const countdown1Date = new Date("2025-06-13T18:00:00");
-        const countdown2Date = new Date("2025-06-14T15:00:00");
-        const countdown3Date = new Date("2025-06-15T09:00:00");
+        const countdown2Date = new Date("2026-05-30T15:00:00");
+        const countdown3Date = new Date("2026-06-31T09:00:00");
 
         // Fonction pour formater le temps restant
         function formatTime(time) {
@@ -80,21 +73,18 @@
         function updateCountdown() {
             const now = new Date();
 
-            const countdown1Time = countdown1Date.getTime() - now.getTime();
+
             const countdown2Time = countdown2Date.getTime() - now.getTime();
             const countdown3Time = countdown3Date.getTime() - now.getTime();
 
-            const countdown1Element = document.getElementById("countdown1");
+
             const countdown2Element = document.getElementById("countdown2");
             const countdown3Element = document.getElementById("countdown3");
 
-            countdown1Element.textContent = formatTime(countdown1Time);
+
             countdown2Element.textContent = formatTime(countdown2Time);
             countdown3Element.textContent = formatTime(countdown3Time);
 
-            if (countdown1Time <= 0) {
-                countdown1Element.textContent = "Je déclare la Trinité ouverte !";
-            }
 
             if (countdown2Time <= 0) {
                 countdown2Element.textContent = "Bon samedi de Trinité ... soyez sage !";
