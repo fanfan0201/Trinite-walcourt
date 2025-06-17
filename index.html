@@ -78,12 +78,12 @@
             const countdown2Time = countdown2Date.getTime() - now.getTime();
 
 
-            const countdown1Element = document.getElementById("countdown2");
-            const countdown2Element = document.getElementById("countdown3");
+            const countdown1Element = document.getElementById("countdown1");
+            const countdown2Element = document.getElementById("countdown2");
 
 
-            countdown1Element.textContent = formatTime(countdown2Time);
-            countdown2Element.textContent = formatTime(countdown3Time);
+            countdown1Element.textContent = formatTime(countdown1Time);
+            countdown2Element.textContent = formatTime(countdown2Time);
 
 
             if (countdown1Time <= 0) {
